@@ -9,24 +9,33 @@
     <style>
       :host {
         display: block;
+
+        /* COMPONENT BUTTON VARIABLES*/
+        --paper-button-ink-color: var(--my-first-component-button-ink);
+        --paper-button: {
+          /* MIXIN */
+          background-color: var(--my-first-component-button-bg-color);
+          color: var(--my-first-component-button-color);
+        }
+        ;
       }
     </style>
     <h2>Hello [[prop1]]!</h2>
 
-        <!-- CARD 2 -->
-        <paper-card heading="paper spinner" image="" elevation="1" animated-shadow="false">
-            <div class="card-content">
-      
-              <h3>component spinner</h3>
-              <paper-spinner active></paper-spinner>
-      
-              <h3>component Lite spinner</h3>
-              <paper-spinner-lite active></paper-spinner-lite>
-      
-              <h3>component Button</h3>
-              <paper-button>button</paper-button>
-            </div>
-          </paper-card>
+    <!-- CARD 2 -->
+    <paper-card heading="paper spinner" image="" elevation="1" animated-shadow="false">
+      <div class="card-content">
+
+        <h3>component spinner</h3>
+        <paper-spinner active></paper-spinner>
+
+        <h3>component Lite spinner</h3>
+        <paper-spinner-lite active></paper-spinner-lite>
+
+        <h3>component Button</h3>
+        <paper-button>button</paper-button>
+      </div>
+    </paper-card>
 
   </template>
 
@@ -40,7 +49,9 @@
      * @demo demo/index.html
      */
     class MyFirstComponent extends Polymer.Element {
-      static get is() { return 'my-first-component'; }
+      static get is() {
+        return 'my-first-component';
+      }
       static get properties() {
         return {
           prop1: {
