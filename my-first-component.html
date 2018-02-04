@@ -11,11 +11,11 @@
         display: block;
 
         /* COMPONENT BUTTON VARIABLES*/
-        --paper-button-ink-color: var(--my-first-component-button-ink);
+        --paper-button-ink-color: var(--my-first-component-button-ink, red);
         --paper-button: {
           /* MIXIN */
-          background-color: var(--my-first-component-button-bg-color);
-          color: var(--my-first-component-button-color);
+          background-color: var(--my-first-component-button-bg-color, pink);
+          color: var(--my-first-component-button-color, black);
         }
         ;
       }
